@@ -3,10 +3,10 @@
 # Run from the code_package folder:
 #     julia --project=. scripts/ch1_introduction/ex_1_6_jumps.jl
 #
-# Illustrates Ŝ(t) = (1/n) Σ 1{t_i > t} for n = 5 made-up event times 1, 2, 2, 3, 4 (arbitrary time
+# Illustrates Ŝ(t) = (1/n) Σ 1{t_i > t} for n = 5 event times 1, 2, 2, 3, 4 (arbitrary time
 # units), so that t_(2) = t_(3). Ŝ is drawn as horizontal segments only. At each event time an open
 # circle marks the value just before it, Ŝ(t-), and a filled dot marks the value at and just after
-# it, Ŝ(t) = Ŝ(t+). The times are made up for illustration (they are not data).
+# it, Ŝ(t) = Ŝ(t+). The times are chosen for illustration (they are not data).
 #
 # Output: figures/ex_1_6_jumps.pdf   (vector)
 

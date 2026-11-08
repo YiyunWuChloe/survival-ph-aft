@@ -3,9 +3,9 @@
 # Run from the code_package folder:
 #     julia --project=. scripts/ch1_introduction/ex_1_10_km_examples.jl
 #
-# Example 1  A made-up data set of 7 individuals (times in months: 2, 3+, 4, 4, 6+, 7, 9, where
+# Example 1  A constructed data set of 7 individuals (times in months: 2, 3+, 4, 4, 6+, 7, 9, where
 #            + marks a censored time). It is used to show how the product-limit estimate is
-#            computed step by step. The values are artificial and only illustrate the calculation.
+#            computed step by step. The values are chosen only to illustrate the calculation.
 # Example 2  The `lung` data (R package `survival`, read through RDatasets.jl), Kaplan-Meier
 #            curves for the two sexes (1 = male, 2 = female) and the number of patients at risk.
 #
@@ -44,7 +44,7 @@ end
 km_at(km, t) = (i = searchsortedlast(km.tk, t); i == 0 ? 1.0 : km.S[i])
 median_time(km) = (i = findfirst(km.S .<= 0.5); i === nothing ? NaN : km.tk[i])
 
-# --- example 1: made-up data -------------------------------------------------------------
+# --- example 1: constructed data ---------------------------------------------------------
 y1 = [2.0, 3, 4, 4, 6, 7, 9]
 δ1 = [true, false, true, true, false, true, true]
 km1 = kaplan_meier(y1, δ1)
